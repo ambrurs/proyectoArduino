@@ -5,4 +5,9 @@ services:
     build: ./serverTcp
     ports:
      - "4100:4100"
-    command: node index.js  
+    command: node index.js 
+  server_tcp2:
+    build: ./serverTcp
+    ports:
+     - "5055:5055"
+    command: node index.js 
