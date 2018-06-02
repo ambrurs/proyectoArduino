@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . /usr/src
 
-EXPOSE 4001
+EXPOSE 22
 
 CMD ["npm", "start"]
