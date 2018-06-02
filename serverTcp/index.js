@@ -8,6 +8,6 @@ var server = net.createServer(function(socket) {
 	});
 });
 
-server.listen(4001, 'localhost');
+server.listen(4100, 'localhost');
 
 console.log("Server running at port 1337\n");
