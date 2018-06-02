@@ -8,6 +8,6 @@ var server = net.createServer(function(socket) {
 	});
 });
 
-server.listen(1337, '206.189.206.12');
+server.listen(4001, '206.189.206.12');
 
 console.log("Server running at port 1337\n");
