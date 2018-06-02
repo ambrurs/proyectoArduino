@@ -7,7 +7,7 @@ services:
      - "4100:4100"
     command: node index.js 
   server_tcp2:
-    build: ./serverTcp
+    build: ./serverSocket
     ports:
      - "5055:5055"
     command: node index.js 
