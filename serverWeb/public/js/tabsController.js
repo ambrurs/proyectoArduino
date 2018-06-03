@@ -114,4 +114,38 @@
       }
     });
 
+    mySocket.on('temperaturaHtmlB',function(data){
+      $scope.temp2 = data;
+
+      if(data > 40){
+        document.getElementById("h1TempB").classList.remove('temperatura-color');
+        document.getElementById("h1TempB").classList.remove('temperatura-color3');
+        document.getElementById("h1TempB").classList.add('temperatura-color2');
+      }else if(data < 10){
+        document.getElementById("h1TempB").classList.remove('temperatura-color');
+        document.getElementById("h1TempB").classList.remove('temperatura-color2');
+        document.getElementById("h1TempB").classList.add('temperatura-color3');
+      }else{
+        document.getElementById("h1TempB").classList.remove('temperatura-color2');
+        document.getElementById("h1TempB").classList.remove('temperatura-color3');
+        document.getElementById("h1TempB").classList.add('temperatura-color');
+      }
+    });
+
+    mySocket.on('luz',function(data){
+      console.log(data);
+      if (data === ' true') {
+        setInterval(function(){  
+          $("#fullpage").removeClass("night");
+          $("#switch").removeClass("switched");
+        }, 10000);
+      }
+      else {
+        setInterval(function(){  
+          $("#fullpage").addClass("night");
+          $("#switch").addClass("switched");
+        }, 10000);
+      }
+    });
+
   });
