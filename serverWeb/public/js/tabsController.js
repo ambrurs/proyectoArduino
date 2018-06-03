@@ -98,8 +98,8 @@
     });
 
     mySocket.on('luz',function(data){
-      
-      if (data) {
+
+      if (data === 'true') {
         $("#fullpage").removeClass("night");
         $("#switch").removeClass("switched");
       }
