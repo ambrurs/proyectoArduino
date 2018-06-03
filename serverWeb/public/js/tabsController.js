@@ -100,18 +100,18 @@
 
     mySocket.on('luz',function(data){
       console.log(data);
-      setInterval(function(){  
       if (data === ' true') {
-        
+        setInterval(function(){  
           $("#fullpage").removeClass("night");
           $("#switch").removeClass("switched");
-        
+        }, 60000);
       }
       else {
+        setInterval(function(){  
           $("#fullpage").addClass("night");
           $("#switch").addClass("switched");
+        }, 60000);
       }
-    }, 30000);
     });
 
   });
