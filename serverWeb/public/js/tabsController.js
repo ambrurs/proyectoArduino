@@ -99,7 +99,7 @@
 
     mySocket.on('luz',function(data){
       console.log(data);
-      if (data === 'true') {
+      if (data === ' true') {
         $("#fullpage").removeClass("night");
         $("#switch").removeClass("switched");
       }
