@@ -104,13 +104,13 @@
         setInterval(function(){  
           $("#fullpage").removeClass("night");
           $("#switch").removeClass("switched");
-        }, 60000);
+        }, 6000);
       }
       else {
         setInterval(function(){  
           $("#fullpage").addClass("night");
           $("#switch").addClass("switched");
-        }, 60000);
+        }, 6000);
       }
     });
 
