@@ -18,15 +18,15 @@
     }
 
     $scope.encenderRojo = function(){
-          mySocket.emit('ledColor','#E80021');
+          mySocket.emit('ledColor','#FF0000');
     }
 
     $scope.encenderAzul = function(){
-          mySocket.emit('ledColor','#3C1DFF');
+          mySocket.emit('ledColor','#0000FF');
     }
 
     $scope.encenderVerde = function(){
-          mySocket.emit('ledColor','#49FF2C');
+          mySocket.emit('ledColor','#00FF00');
     }
 
     $scope.encenderMorado = function(){
