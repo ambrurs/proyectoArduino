@@ -30,6 +30,10 @@ app.get('/', function (req,res) {
             socket.broadcast.emit('temperaturaHtml', data);
         });
 
+        socket.on('tempResponse',function(data){
+            socket.broadcast.emit('temperaturaHtml', data);
+        });
+
         socket.on('onServo',function(){
             socket.broadcast.emit('onServoHtml');
         });        
