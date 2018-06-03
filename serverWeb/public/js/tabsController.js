@@ -100,13 +100,16 @@
     mySocket.on('luz',function(data){
       console.log(data);
       if (data === ' true') {
-        $("#fullpage").removeClass("night");
-        $("#switch").removeClass("switched");
+        setInterval(function(){  
+          $("#fullpage").removeClass("night");
+          $("#switch").removeClass("switched");
+        }, 6000);
       }
       else {
-        $("#fullpage").addClass("night");
-        $("#switch").addClass("switched");
-
+        setInterval(function(){  
+          $("#fullpage").addClass("night");
+          $("#switch").addClass("switched");
+        }, 6000);
       }
     });
 
