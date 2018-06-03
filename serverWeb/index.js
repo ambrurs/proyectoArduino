@@ -43,6 +43,7 @@ app.get('/', function (req,res) {
         });
 
         socket.on('sensorLuz',function(data){
+            console.log('LUZ'+data);
             socket.broadcast.emit('luz',data);
         });        
 
