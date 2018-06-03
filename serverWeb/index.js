@@ -35,11 +35,11 @@ app.get('/', function (req,res) {
         });
 
         socket.on('onServo',function(){
-            socket.broadcast.emit('onServoHtml');
+            socket.broadcast.emit('onServoS');
         });        
 
         socket.on('offServo',function(){
-            socket.broadcast.emit('offServo');
+            socket.broadcast.emit('offServoS');
         });
 
         socket.on('sensorLuz',function(data){

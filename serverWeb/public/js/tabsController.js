@@ -70,13 +70,14 @@
     $scope.onServo = function(){
       document.getElementById("gear").classList.remove('gear-innerS');
       document.getElementById("gear").classList.add('gear-inner');
-
+      mySocket.emit('onServo');
     }
 
 
     $scope.offServo = function(){
       document.getElementById("gear").classList.remove('gear-inner');
       document.getElementById("gear").classList.add('gear-innerS');
+      mySocket.emit('offServo');
     }
 
     mySocket.on('temperaturaHtml',function(data){
