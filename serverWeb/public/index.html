@@ -7,6 +7,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/gear.css">
+  <link rel="stylesheet" type="text/css" href="css/sunMoon.css">
 </head>
 <body ng-app="UserManagement" ng-controller="UserManagementController">
 
@@ -22,60 +23,91 @@
       <li class="active"><a data-toggle="tab" href="#leds">Leds</a></li>
       <li><a data-toggle="tab" href="#menu1">Termometro</a></li>
       <li><a data-toggle="tab" href="#menu2">Servomotor</a></li>
+      <li><a data-toggle="tab" href="#menu3">Fotocelda</a></li>
     </ul>
 
     <div class="tab-content">
       <div id="leds" class="tab-pane fade in active">
         <div class="row leds">
             <!--<button ng-click="colorModal();" id="b_color" type="button" class="btn btn-lg btn-negro">Color </button>
-            <button ng-click="encenderAmarillo();" id="b_amrillo" type="button" class="btn btn-lg btn-amarillo">Amarillo</button>-->
-            <button ng-click="encenderAzul();" id="b_azul" type="button" class="btn btn-lg btn-azul">Azul</button>
-            <button ng-click="encenderRojo();" id="b_rojo" type="button" class="btn btn-lg btn-rojo">Rojo</button>
-            <button ng-click="encenderVerde();" id="b_verde" type="button" class="btn btn-lg btn-verde">Verde</button>
-            <!--<button ng-click="encenderMorado();" id="b_morado" type="button" class="btn btn-lg btn-morado">Morado</button> -->
+              <button ng-click="encenderAmarillo();" id="b_amrillo" type="button" class="btn btn-lg btn-amarillo">Amarillo</button>-->
+              <button ng-click="encenderAzul();" id="b_azul" type="button" class="btn btn-lg btn-azul">Azul</button>
+              <button ng-click="encenderRojo();" id="b_rojo" type="button" class="btn btn-lg btn-rojo">Rojo</button>
+              <button ng-click="encenderVerde();" id="b_verde" type="button" class="btn btn-lg btn-verde">Verde</button>
+              <!--<button ng-click="encenderMorado();" id="b_morado" type="button" class="btn btn-lg btn-morado">Morado</button> -->
 
-          <br><br>
-          <input id="color" style="display: none;" type=color pattern="#[a-f0-9]{6}" title="hexadecimal color" placeholder="#000000" ng-model="colorP" ng-change="colorSend();" >
-        </div>
-      </div>
-      <div id="menu1" class="tab-pane fade">
-        <div class="temperatura">
-          <div id="termo">
-            <h1  id="h1Temp" class="temperatura-border temperatura-color" > <span  id="temperatura"></span> {{temp}} °C </h1>
+              <br><br>
+              <input id="color" style="display: none;" type=color pattern="#[a-f0-9]{6}" title="hexadecimal color" placeholder="#000000" ng-model="colorP" ng-change="colorSend();" >
+            </div>
           </div>
-        </div>  
-      </div>
-      <div id="menu2" class="tab-pane fade">
-        <div id="leds" class="tab-pane fade in active">
-        <div class="row leds">
-            <button ng-click="onServo();" id="b_on" type="button" class="btn btn-lg btn-primary">ON- Servo</button>
-            <button ng-click="offServo();" id="b_off" type="button" class="btn btn-lg btn-danger">OFF- Servo</button>   
-         </div> 
-       </div>
-          <div class="container-gear">
-            <div class="gearbox">
-              <div class="overlay"></div>
-                <div  class="gear one large">
-                      <div id="gear" class="gear-innerS">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                      </div>
-                    </div>                
-                </div>
-              </div>  
+          <div id="menu1" class="tab-pane fade">
+            <div class="temperatura">
+              <div id="termo">
+                <h1  id="h1Temp" class="temperatura-border temperatura-color" > <span  id="temperatura"></span> {{temp}} °C </h1>
+              </div>
             </div>  
           </div>
+          <div id="menu2" class="tab-pane fade">
+            <div id="leds" class="tab-pane fade in active">
+              <div class="row leds">
+                <button ng-click="onServo();" id="b_on" type="button" class="btn btn-lg btn-primary">ON- Servo</button>
+                <button ng-click="offServo();" id="b_off" type="button" class="btn btn-lg btn-danger">OFF- Servo</button>   
+              </div> 
+            </div>
+            <div class="container-gear">
+              <div class="gearbox">
+                <div class="overlay"></div>
+                <div  class="gear one large">
+                  <div id="gear" class="gear-innerS">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
+                </div>                
+              </div>
+            </div>  
+          </div> 
+          <div id="menu3" class="tab-pane fade">
+              <div class="row leds">
+                <div id="fullpage">  
+                  <div class="section">
+                    <p id="info"></p>
+                    <div class="time-circle">
+                      <div class="sun"></div>
+                      <div class="moon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="stars">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <div class="water"></div>
+                    </div>
+                    <div id="switch" style="display: none;">
+                      <div id="circle"></div>
+                    </div>
+                  </div>
+                </div>                  
+              </div>
+          </div> 
         </div>
       </div>
     </div>
-
   </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script type="text/javascript" src="angular-socket-io-master/socket.js"></script>
-  <script type="text/javascript" src="js/tabsController.js"></script>
+
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="angular-socket-io-master/socket.js"></script>
+<script type="text/javascript" src="js/tabsController.js"></script>
 </body>
 </html>
