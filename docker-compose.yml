@@ -1,13 +1,13 @@
 version: '3'
 
 services:
-  server_tcp:
-    build: ./serverTcp
-    ports:
-     - "4100:4100"
-    command: node index.js 
   server_tcp2:
     build: ./serverSocket
     ports:
      - "5055:5055"
+    command: node index.js 
+  server_web:
+    build: ./serverWeb
+    ports:
+     - "8081:8081"
     command: node index.js 

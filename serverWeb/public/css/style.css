@@ -1,0 +1,181 @@
+  .btn{
+    width: 150px;
+    padding: 15px 32px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .btn-negro{
+    background-color: rgb(0, 0, 0);
+  }
+
+  .btn-amarillo{
+    background-color: rgb(255, 228, 0);
+  }
+  
+  .btn-azul{
+    background-color: rgb(60, 29, 255);
+  }
+  
+  .btn-rojo{
+    background-color: rgb(232, 0, 33);
+  }
+  
+  .btn-verde{
+    background-color: rgb(73, 255, 44);
+  }
+
+  .btn-morado{
+    background-color: rgb(154, 46, 254);
+  }  
+
+  .leds{      
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 70%;
+    min-height: 70%;
+    width: 100%;
+    min-width: 80%;
+    
+  }
+
+  .leds-background{
+    margin: 0 auto;
+    height: 10%;
+    width:  5%;
+    margin-top: 25px;
+    padding-top: 50px;
+    margin-left: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #ccc;
+    float: left;
+  }
+
+  .leds-blinky-background{
+    margin: 0 auto;
+    height: 10%;
+    width:  5%;
+    margin-top: 25px;
+    padding-top: 50px;
+    margin-left: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #ccc;
+    float: left;
+    animation: blinkYellow 0.5s infinite;
+  }
+
+  .leds-blinkg-background{
+    margin: 0 auto;
+    height: 10%;
+    width:  5%;
+    margin-top: 25px;
+    padding-top: 50px;
+    margin-left: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #ccc;
+    float: left;
+    animation: blinkGreen 0.5s infinite;
+  }
+
+  .leds-blinkr-background{
+    margin: 0 auto;
+    height: 10%;
+    width:  5%;
+    margin-top: 25px;
+    padding-top: 50px;
+    margin-left: 200px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #ccc;
+    float: left;
+    animation: blinkRed 0.5s infinite;
+  }
+  @keyframes blinkYellow {
+    from { background-color: yellow; }
+      50% { background-color: #CCC;}
+      to { background-color: yellow; }
+  }
+
+  @keyframes blinkGreen {
+    from { background-color: green; }
+      50% { background-color: #CCC;}
+      to { background-color: green; }
+  }
+
+  @keyframes blinkRed {
+    from { background-color: red; }
+      50% { background-color: #CCC;}
+      to { background-color: red; }
+  } 
+
+  .navbar-header {
+    float: left;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-default{
+    background: #112273;
+    text-align: center;
+    padding-top: 15px;
+
+  }
+
+  .navbar-default .navbar-brand{
+    color : #FFF;   
+    float: none;
+  }
+
+  .navbar-default .navbar-brand:hover{
+    color : #FFF;
+  }
+
+  .temperatura{
+    margin: 0 auto;
+    text-align: center;
+    height: 70%;
+  }
+  
+  .btns{
+    padding-left: 4%;
+  }
+
+
+  #termo{
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 20%;
+    width: 70%;
+  }
+
+  .temperatura-border{
+    border: 1px solid;
+    
+  }
+
+  .temperatura-color{
+    background: #ccc;
+  }
+
+  .temperatura-color2{
+    background: red;
+    color: white;
+  }
+
+  .temperatura-color3{
+    background: blue;
+    color: white;
+  }
+
+.form-control-sm {
+  width: 40%;
+  height: 3rem;
+}
+.form-control {
+  width: 40%; 
+  height: 3rem;
+}

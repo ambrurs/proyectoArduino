@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/gear.css">
+</head>
+<body ng-app="UserManagement" ng-controller="UserManagementController">
+
+  <input type="hidden" id="valServ" name="valServ">
+
+  <nav class="navbar navbar-default">
+    <a class="navbar-brand" href="#">Domotica</a>
+  </nav>
+
+  <div class="container " role="main">
+
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#leds">Leds</a></li>
+      <li><a data-toggle="tab" href="#menu1">Termometro</a></li>
+      <li><a data-toggle="tab" href="#menu2">Servomotor</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="leds" class="tab-pane fade in active">
+        <div class="row leds">
+            <button ng-click="colorModal();" id="b_color" type="button" class="btn btn-lg btn-negro">Color </button>
+            <button ng-click="encenderAmarillo();" id="b_amrillo" type="button" class="btn btn-lg btn-amarillo">Amarillo</button>
+            <button ng-click="encenderAzul();" id="b_azul" type="button" class="btn btn-lg btn-azul">Azul</button>
+            <button ng-click="encenderRojo();" id="b_rojo" type="button" class="btn btn-lg btn-rojo">Rojo</button>
+            <button ng-click="encenderVerde();" id="b_verde" type="button" class="btn btn-lg btn-verde">Verde</button>
+            <button ng-click="encenderMorado();" id="b_morado" type="button" class="btn btn-lg btn-morado">Morado</button>
+
+          <br><br>
+          <input id="color" style="display: none;" type=color pattern="#[a-f0-9]{6}" title="hexadecimal color" placeholder="#000000" ng-model="colorP" ng-change="colorSend();" >
+        </div>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <div class="temperatura">
+          <div id="termo">
+            <h1  id="h1Temp" class="temperatura-border temperatura-color" > <span  id="temperatura"></span> {{temp}} °C </h1>
+          </div>
+        </div>  
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <div id="leds" class="tab-pane fade in active">
+        <div class="row leds">
+            <button ng-click="onServo();" id="b_on" type="button" class="btn btn-lg btn-primary">ON- Servo</button>
+            <button ng-click="offServo();" id="b_off" type="button" class="btn btn-lg btn-danger">OFF- Servo</button>   
+         </div> 
+       </div>
+          <div class="container-gear">
+            <div class="gearbox">
+              <div class="overlay"></div>
+                <div  class="gear one large">
+                      <div id="gear" class="gear-innerS">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                      </div>
+                    </div>                
+                </div>
+              </div>  
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="angular-socket-io-master/socket.js"></script>
+  <script type="text/javascript" src="js/tabsController.js"></script>
+</body>
+</html>
