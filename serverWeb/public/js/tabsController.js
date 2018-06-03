@@ -14,23 +14,23 @@
     //LEDS 
 
     $scope.encenderAmarillo = function(){
-          mySocket.emit('ledColor','{r: 255, g: 228, b: 0}');
+          mySocket.emit('ledColor','#FFE400');
     }
 
     $scope.encenderRojo = function(){
-          mySocket.emit('ledColor','{r: 232, g: 0, b: }');
+          mySocket.emit('ledColor','#E80021');
     }
 
     $scope.encenderAzul = function(){
-          mySocket.emit('ledColor','{r: 60, g: 29, b: 255}');
+          mySocket.emit('ledColor','#3C1DFF');
     }
 
     $scope.encenderVerde = function(){
-          mySocket.emit('ledColor','{r: 73, g: 255, b: 44}');
+          mySocket.emit('ledColor','#49FF2C');
     }
 
     $scope.encenderMorado = function(){
-          mySocket.emit('ledColor','{r: 154, g: 46, b: 254}');
+          mySocket.emit('ledColor','#9A2EFE');
     }
 
     $scope.colorModal = function(){
@@ -38,14 +38,17 @@
     }  
 
     $scope.colorSend = function(){
-      debugger;
+      /*debugger;
       var valorColor = $scope.colorP;
       document.getElementById("b_color").style.backgroundColor =  $scope.colorP;
       var r = hexToRgb(valorColor).r;
       var g = hexToRgb(valorColor).g;
       var b = hexToRgb(valorColor).b;
 
-      mySocket.emit('ledColor','{r: '+r+', g: '+g+', b: '+b+'}');
+      /*mySocket.emit('ledColor','{r: '+r+', g: '+g+', b: '+b+'}');*/
+      document.getElementById("b_color").style.backgroundColor =  $scope.colorP;
+      mySocket.emit('ledColor',$scope.colorP);
+
     }
 
 

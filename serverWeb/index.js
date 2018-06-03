@@ -26,7 +26,7 @@ app.get('/', function (req,res) {
             socket.broadcast.emit('ledHtml', data);
         });        
 
-        socket.on('temperatura',function(data){
+        socket.on('temp',function(data){
             socket.broadcast.emit('temperaturaHtml', data);
         });
 
@@ -36,9 +36,15 @@ app.get('/', function (req,res) {
 
         socket.on('offServo',function(){
             socket.broadcast.emit('offServo');
+        });
+
+        socket.on('sensorLuz',function(data){
+            socket.broadcast.emit('luz',data);
         });        
 
-
+        socket.on('sensorProxi',function(){
+          
+        });        
 
     });
 
