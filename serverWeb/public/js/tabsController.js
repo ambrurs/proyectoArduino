@@ -14,7 +14,7 @@
     //LEDS 
 
     $scope.encenderAmarillo = function(){
-      mySocket.emit('ledColor','#FFE400');
+      mySocket.emit('ledColor','#000000');
     }
 
     $scope.encenderRojo = function(){
